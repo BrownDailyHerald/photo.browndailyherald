@@ -1,0 +1,66 @@
+/*
+Plugin Name: Glam Slider
+Plugin URI: http://slidervilla.com/glam/
+Description: Glam Slider adds a horizontal content and image carousel with partially visible next and previous slides to any location of your blog.
+Author: Tejaswini Deshpande
+Author URI: http://slidervilla.com/
+Wordpress version supported: 3.0 and above
+*/
+/*  Copyright 2010-2013  Slider Villa  (email : tedeshpa@gmail.com)
+*/
+
+/*basic styles*/
+.glam_slider_fouc .glam_slider {display: none;} /* Keep this as it is */
+.glam_slider div,.glam_slider p,.glam_slider li,.glam_slider span,.glam_slider img,.glam_slider h4,.glam_slider ul{list-style:none;vertical-align:baseline;}
+.glam_slider{margin: 0 0 0 0;line-height:18px;position:relative;height:auto;}
+.glam_slides_wrap{position:relative;overflow:hidden;height:auto;border: 1px solid #ccc;}
+/* root element for scrollable items. Must be absolutely positioned and it should have a extremely large width to accommodate scrollable items. It\'s enough that you set width and height for the root element
+and not for this element. */
+.glam_items { width:20000em; position:absolute; margin-left:120px; }
+.glam_slider .glam_slider_instance { padding: 0; clear: left; overflow:hidden; position:relative;}
+.glam_slider .glam_slider_nav_wrap{position:relative;}
+.glam_slider .glam_slide {float:left;padding: 0;}
+.glam_slider .glam_slideri{float:left;margin:0;position:relative;}
+.glam_slider span{display:inline;}
+.glam_slider a{border:none;text-decoration:none !important;}
+.glam_slider a:hover{text-decoration:underline !important;}
+.glam_slider .glam_slider_thumbnail{position:relative;opacity: .5;-moz-opacity: .50;filter: alpha(opacity=50);width:100%;}
+.glam_slider h4{clear:none;display:block;padding:0px;border:none;text-shadow:none}
+.glam_slider div.glam_slideri{padding:0px}
+
+.glam_slide_content { background-color: rgba(236,236,236,.85);filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#AAECECEC',endColorstr='#AAECECEC');box-shadow: 0  -5px 5px -5px #333;position: absolute; bottom: 0px; left: 0px; padding: 10px 40px 15px 20px; z-index: 2; width:100%;-webkit-box-sizing: border-box;	-moz-box-sizing:    border-box;	-ms-box-sizing:     border-box;	box-sizing: border-box;height:auto;}
+.glam_slide_content h4{padding-bottom:5px;float:left;display:block;width:100%;}
+.glam_slide_content p { clear:left; }
+.glam_slider p.more a{text-decoration:underline;float:right;}
+.glam_slider p.more a:hover{text-decoration:none;}
+
+.glam_slider p.more a{text-decoration:underline;float:right;}
+.glam_slider p.more a:hover{text-decoration:none;}
+
+/* Next and Previous navigational arrows */
+.glam_slider .glam_next {position: absolute;right: 0px; width: 23px; height: 46px; cursor: pointer; background: transparent url(../../buttons/default/next.png) no-repeat;z-index:99;}
+.glam_slider .glam_next{background-position:-23px 0;}
+.glam_slider .glam_next:hover{background-position:0 0;}
+.glam_slider .glam_prev { position: absolute;left: 0px; width: 23px; height: 46px; cursor: pointer; background: transparent url(../../buttons/default/prev.png) no-repeat 0 0;z-index:99;}
+.glam_slider .glam_prev:hover{background-position:-23px 0;}
+
+.glam_slider .glam_left_link,.glam_slider .glam_right_link{position:absolute;z-index:10;background:#000;opacity:0;-moz-opacity:.0;filter:alpha(opacity=0)}
+.glam_slider .glam_right_link{right:0;top:0}
+
+/*Navigation buttons*/
+.glam_slider .glam_nav { position:relative;text-align:center;margin: 0 auto;z-index:15; }
+.glam_slider .glam_nav a { margin: 3px; display:inline-block;width:16px;height:16px;background:url(../../buttons/default/nav.png) no-repeat top left;cursor:pointer;}
+.glam_slider .glam_nav a.glam_nav_a { background-position:-16px 0 !important; }
+.glam_slider .glam_nav a:focus { outline: none; }
+
+.glam_slider .sldr_clearlt{display:block;visibility:hidden;clear:left;height:0;content:".";}
+.glam_slider .sldr_clearrt{display:block;visibility:hidden;clear:right;height:0;content:".";}
+
+/* video css */
+/*.glam_slider .mejs-overlay-button{background:url(images/bigplay_small.png) no-repeat !important;margin-left:-13px;top:50%;margin-top:-13px !important;}*/
+.glam_slider .glam_eshortcode{position: absolute;top: 0;height:100%;opacity: 1 !important;width: 100%;}
+.glam_slider video{display: inline-block;width: 100% !important;}
+.glam_slider div.mejs-mediaelement{max-width:100% !important;}
+.glam_slider div.mejs-inner,.glam_slider div.wp-video-shortcode,.glam_slider div.wp-video,.glam_slider .mejs-layers,.glam_slider .mejs-overlay-play{height:100% !important;margin:0 !important;width: 100% !important;}
+.glam_slider .hentry .mejs-container {margin: none !important;}
+.glam_slider .mejs-controls{z-index: 100; }

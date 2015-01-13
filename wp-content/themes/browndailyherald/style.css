@@ -1,0 +1,523 @@
+/*********************************************************************************************
+
+Theme Name: Brown Daily Herald Theme
+Version: 1.2.3.01
+Author: BDH Web Staff
+Author URI: http://www.browndailyherald.com
+Template: litepress
+
+*********************************************************************************************/
+
+@import url("../litepress/style.css");
+
+/* We want our fonts to be Georgia */
+input, textarea, body { font-family: Georgia, Times New Roman, Times, serif; }
+
+
+
+/* This hides overflowing text in the category widget better. May need to tweak this */
+.category-widget .tabs a { line-height: 1.4; }
+
+/* Fix the margins on the widget */
+.category-widget { margin: 30px 0 0; }
+
+/* Copied from a declaration in the main stylesheet so we can have this header elsewhere */
+.general-widget h2 { border-top: 4px solid #ececec; border-bottom:2px solid #ececec; color: #3f3d3d; font-size: 18px; font-weight: bold; line-height: 38px; margin: 25px 0 15px 0; }
+
+/* Make the sidebar look nicer */
+.wrap { width: 1000px; }
+#sidebar { width: 320px; }
+#sidebar .widget {
+	background-color: #F8F8F8;
+	border: 1px solid #ECECEC;
+	padding: 8px;
+	width: 300px;
+}
+.widget h3 {
+	margin-bottom: 10px;
+}
+
+/* Need to re-define these after we change the width */
+@media screen and (max-width: 980px) {
+	.wrap { width: 90% !important; padding: 0 5% !important; }
+	#sidebar { width:100% !important; margin-left:-2% !important;}
+	#sidebar .widget {width:48% !important; margin-right:2% !important; float:left !important; }
+}
+@media screen and (max-width: 640px) {
+	.wrap { width: 94% !important; padding: 0 3% !important; }
+	#sidebar { width:94% !important; margin-left:0% !important; padding-right: 6% !important; }
+	#sidebar .widget {width:100% !important; margin-right:0% !important; float:none !important; }
+}
+
+/* Make the "wpzoom social widget" sidebar look nicer by giving each item the full width and bunching them closer together */
+.wpzoomSocial li { width: 100%; margin: 0 0 6px 2px; }
+
+/* Make the RSS widget look cleaner */
+.widget_rss ul li { padding: 0 0 12px; }
+.widget_rss h3.title a.rsswidget { color: #3F4247; }
+
+/* Make the BlogDH RSS Widget look nicer */
+#sidebar #rss-2 .title { padding-left: 32px; background: transparent url('images/blog-dh-icon.png') no-repeat 0 0; }
+#sidebar #rss-2 .title img { display: none; }
+
+/* Make our tabs look nicer */
+.tabbertab ul li {
+	padding: 0 0 6px;
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin-left: 20px;
+}
+
+/* Reduce the line height on widgets */
+.widget ul { line-height: 1.4; }
+
+/* No more margins between tags/topics, it looks ugly when they're not in hashtag format. Also, tweak the style a bit */
+.tag_list a { margin: 0; color: #9F3F3F; }
+.tag_list { font-size: 14px; font-weight: bold; }
+
+/* Support for subtitles */
+h2.subtitle {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.3;
+	margin: -10px 0 10px;
+	color: #6D6D6D;
+}
+
+/* Change the navbar so it looks more like the old site */
+#navbarsecond {
+	background-image: none;
+	background-color: #4D3430;
+	border-top: 1px solid #613933;
+}
+
+#navbar {
+	background-color: #4D3430;
+	border-bottom: 1px solid #613933;
+}
+
+#navbar .dropdown a,
+#navbarsecond .dropdown a,
+#navbarsecond .dropdown li:hover a,
+#navbarsecond .dropdown li:hover ul a { color: #FFF; }
+
+/* Don't bold the current menu item. The detection is inconsistent for Landing Pages. */
+.dropdown .current-menu-item a { font-weight: normal; }
+
+/* Make the search box nicer looking */
+#s { font-weight: normal; color: #000; }
+
+/* Header colors changes */
+#header { background-color: #3A1E1A !important; }
+
+/* Add our flag. */
+#navbar { margin-bottom: 0; }
+#header div.search_form { padding-top: 65px; }
+#searchform, #s {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+#logo { padding-bottom: 0; }
+#logo h1 a {
+	display: block;
+	width: 640px;
+	height: 120px;
+	background: #391E1A url('images/flag.png') no-repeat 0 8px;
+	text-indent: -1000em;
+	outline: none;
+
+	background-size: contain;
+}
+
+/* Make sure the flag scales appropriately */
+@media screen and (max-width: 980px) {
+	#logo { width: 100%; }
+	#logo h1 a { width: 100%; }
+}
+
+/* Center-align our ads */
+div.bdh_ad { margin-bottom: 20px; }
+div.bdh_ad div { margin-left: auto; margin-right: auto; }
+
+/* Add a little spacing for the footer ad */
+div.footer_ad { margin-top: 25px; }
+
+/* Try to align elements on the post-meta properly */
+.post-meta { height: auto; }
+.post-meta span.meta-data { line-height: 30px; }
+
+/* Change the look of post-meta a little bit */
+.post-meta { border-top-width: 2px; padding: 5px 0 4px 15px; }
+
+/* Change the date on posts / post authors / some other text to use a different font */
+.post-meta,
+.meta-author,
+#slider_nav li a span,
+#slider #slides .slide_content .comments,
+div.recent-post div.recent-meta,
+#s,
+#content .category_list,
+.entry div.post-sidebar,
+.post-cover,
+.widget .feature-posts-list small,
+div.bdh-feature-posts .left-side small.post-comments {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Change navigation font/size */
+div.navigation {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+}
+
+/* Changing color to be consistent with other elements on the page */
+.meta-author { color: #6D6D6D; }
+
+/* Remove excess spacing on article page */
+#content .meta-author { border-bottom: 0; padding: 0; }
+
+/* Removing the bottom border/spacing under author for category / archive pages */
+#recent-posts .recent-post .meta-author {
+	border-bottom: 0;
+	padding: 0;
+	margin: 0 0 5px;
+}
+
+/* Adding comments image to all locations where comment summaries are displayed */
+div.recent-post div.recent-meta span.comments a {
+	background: url('../litepress/images/comments.png') no-repeat left center;
+	padding: 0 0 0 16px;
+}
+
+/* Move images to the right hand side */
+.recent-post .post-thumb {
+	margin: 0 0 0 15px;
+	float: right;
+}
+
+/* Allow the share box to take up as much space as it needs */
+.share_box { width: auto; }
+
+/* Reducing wasted space */
+.recent-post { margin-bottom: 15px; padding-bottom: 5px; }
+
+/* Add a hover effect to the second menu, and change the color of its submenus */
+#navbarsecond .dropdown li:hover > a { background-color: #9C2B2B; }
+#navbarsecond .dropdown ul { background-color: #9C2B2B; }
+#navbarsecond .dropdown li:hover li a:hover { background-color: #991111; }
+
+/* Remove excess padding around top/bottom of menus */
+.dropdown ul {	padding: 0; }
+/* Make second submenu look a little nicer when the hover effect is used */
+#navbarsecond .dropdown ul {
+	margin-top: 9px;
+}
+
+/* Adding a category list above single articles */
+#content .category_list { text-transform: uppercase; margin-bottom: 0; font-size: 12px; }
+
+/* Custom div for author information */
+div.author_top {
+    border-top: 4px solid #ececec;
+    border-bottom: 2px solid #ececec;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 0 0 15px 0;
+    padding:8px 0;
+	color: #3f3d3d;
+}
+
+div.author_photo {
+	float: left;
+	margin-right: 10px;
+}
+
+div.author_follow {
+	float: left;
+}
+
+/* Make the pagination look pretty */
+div.navigation span, div.navigation a {
+	display: inline-block;
+	margin: 2px 2px 2px 0;
+	padding: 6px 9px 5px 9px;
+	border: 1px solid #ECECEC;
+	text-decoration: none;
+	width: auto;
+	color: #9F3F3F;
+	background: #F8F8F8;
+	line-height: 22px;
+}
+
+div.navigation span.current {
+	padding: 6px 9px 5px 9px;
+	background: #9F3F3F;
+	font-weight: normal;
+	color: white !important;
+}
+
+div.navigation a:hover {
+	color: white;
+	background: #9F3F3F;
+}
+
+/* We want to be able to display images on the right hand side in some cases. */
+.entry div.post-sidebar {
+	float: right;
+	width: 45%;
+	margin-left: 3%;
+
+	font-size: 11px;
+	line-height: 1.2;
+}
+.post-cover { font-size: 11px; line-height: 1.2; color: #222222; }
+
+@media screen and (max-width: 450px) {
+	.entry div.post-sidebar { width: 100%; margin-left: 0; }
+}
+
+.entry div.post-sidebar p, .post-cover p { margin: 0; }
+.entry div.post-sidebar div.post-image { margin-bottom: 15px; }
+.entry div.post-sidebar img, .post-cover img { margin-bottom: 5px; }
+.entry div.post-sidebar .image-byline,
+.post-cover .image-byline {
+	color: gray;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: right;
+	padding: 0;
+	margin: 0 0 2px;
+}
+.entry div.post-sidebar div.post-image span.more-images {
+	display: block;
+	width: 100%;
+
+	background-color: #FFF;
+	text-transform: uppercase;
+	line-height: 26px;
+	opacity: .8;
+
+	margin: -31px 0 5px 0;
+	padding-left: 5px;
+}
+
+/* Make the images scale appropriately with the responsive design */
+.entry div.post-sidebar img {
+	width: 100%;
+	height: auto;
+}
+
+/* We set a fixed height for the slides so they don't move the rest of the content
+around when their length is uneven */
+#slider #slides { height: 425px; }
+@media screen and (max-width: 640px) {
+/*	#slider #slides { height: 525px; }*/
+}
+
+/* Making the slider and featured categories widget work in a Carrington Build homepage */
+#slider_nav li, .category-widget ul li { list-style: none; }
+.entry #slider ul, .entry .category-widget ul { margin: 0; }
+.entry #slider img, .entry .category-widget img { margin-bottom: 0; }
+.entry #slider h3 { line-height: 27px; }
+.entry .category-widget h2 { line-height: 38px; }
+.entry .category-widget h3 { margin-bottom: 0; }
+
+/* A new featured posts widget! */
+div.bdh-feature-posts div.left-side { width: 40%; float: left; padding-top: 6px; }
+div.bdh-feature-posts div.right-side { width: 57%; float: right; }
+@media screen and (max-width: 980px) {
+	div.bdh-feature-posts div.left-side { width: 100%; }
+	div.bdh-feature-posts div.right-side { width: 100%; }
+}
+div.bdh-feature-posts .left-side h3 { margin-top: 8px; }
+div.bdh-feature-posts .left-side small.post-comments { color: #8B96A0; font-size: 12px; }
+div.bdh-feature-posts .left-side small.post-comments a, .widget .feature-posts-list small a { font-weight: normal; }
+div.bdh-feature-posts .feature-posts-list li:last-child { border-bottom: 0; }
+
+/* Redesign the footer */
+@media screen {
+	#footer {
+		background-color: #3A1E1A;
+		color: #FFF;
+		border-top: 1px solid #613933;
+	}
+}
+#footer .widget-area,
+#footer .copyright { width: 1000px; margin: 0 auto; }
+@media screen and (max-width: 1000px) {
+	#footer .widget-area, #footer .copyright { width: 90% !important; padding: 0 5% !important; }
+}
+@media screen and (max-width: 640px) {
+	#footer .widget-area, #footer .copyright { width: 94% !important; padding: 0 3% !important; }
+}
+@media print {
+	#footer { padding: 0px; }
+}
+
+#footer .widget-area { border-bottom: 1px solid #613933; }
+#footer .widget h3 { color: #FFF; }
+#footer .widget a { color: #FFF; font-weight: normal; }
+#footer ul.sub-menu { margin-left: 10px; }
+
+/* Fix for IE bug with images and responsive design */
+.entry .category-widget img { width: inherit; max-width: 100%; height: auto; }
+
+/* Need some CSS for Carrington Build */
+/* Images align */
+.entry .cfct-image-center, img.cfct-image-center { float: none; }
+.cfct-image-left, .entry .cfct-image-left { float: left; margin-right:15px; }
+.cfct-image-right, .entry .cfct-image-right { float: right; margin-left:15px; }
+.cfct-module h2.cfct-mod-title { font-size: 16px; }
+.cfct-module h2.cfct-header-small { font-size: 14px; }
+.cfct-module h2.cfct-header-large { font-size: 18px; }
+.cfct-content-small { font-size: .75em; }
+.cfct-content-large { font-size: 1.5em; }
+.cfct-module h1, .cfct-module h2, .cfct-module h3, .cfct-module h4, .cfct-module h5, .cfct-module h6 { margin-bottom: 7px; }
+.cfct-html h2.category-widget { margin-top: 22px; }
+
+/* Custom CSS for related posts plugin */
+.related-posts ul {
+    margin: 0.5em 0 1em 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    float: left;
+    clear: both;
+}
+.related-posts li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: left;
+}
+.related-posts img {
+    margin: 0 0.5em 0.5em 0;
+    float: left;
+}
+
+/* Need to import custom CSS for "Organize Series" plugin.
+This has been slightly modified from the original CSS to make it look nicer. */
+
+.imgset {
+	float: left;
+	/*overflow: visible;*/
+	border: none;
+	margin-right: 6px;
+}
+
+.serieslist-content {
+	font-size: 1.2em;
+	color: #000;
+	text-align: left;
+}
+
+.serieslist-box {
+	background: #fff;
+	width: 90%;
+	/*height: 100px;*/
+	padding: 6px;
+	margin: 10px auto 0 auto;
+	border: 1px solid #1E3A96;
+	border-bottom: 2px solid #1E3A96;
+}
+
+html>body .serieslist-box {
+	height: auto;
+	/*min-height: 100px;*/
+} 	
+
+h2.series-title {
+	font-size: 1.2em;
+	color: #1E3A96;
+	text-align: center;
+}
+
+ul.serieslist-ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+li.serieslist-li {
+	margin: 0;
+	padding: 0;
+}
+
+.seriesbox {
+	display:inline;
+	float: right;
+	background: #F8F8F8;
+	color: #777;
+	text-align: left;
+	font-size: .8em;
+	margin: 0 10px 10px 10px;
+	padding: 6px 6px 12px 6px;
+	border: 2px solid #ECECEC;
+	border-radius: 10px;
+	min-width: 125px;
+}
+
+.seriesbox img {
+	margin: 0px 12.5px 0 12.5px;
+}
+
+h3.series-title-post-page {
+	font-size: 1.1em;
+	color: #1E3A96;
+	text-align: center;
+}
+
+p.series-description {
+	font-style: italic;
+}
+
+.seriesmeta {
+	background-color: inherit;
+	font-size: .9em;
+	margin: 0 0 15px;
+	font-style: italic;
+	font-weight: bold;
+	color: gray;
+}
+
+#slider .seriesmeta {
+	font-weight: normal;
+	color: inherit;
+	margin: 0 0 7px;
+}
+
+.series-nav-left {
+	float: left;
+}
+
+.series-nav-right {
+	float: right;
+}
+
+/* Make section/landing page h2s smaller than the archive title */
+.recent-post h2, .recent-post h2 a {
+	font-size: 18px;
+}
+
+h1.archive_title {
+	font-size: 21px;
+}
+
+/* PRINT FIXES */
+@media print {
+	#content { width: auto !important; }
+	header, div#navbarsecond, #footer .widget-area, div#layout, #sidebar,
+		a.post-edit-link, div.share_box, iframe, div.related-posts {
+		display: none !important;
+	}
+}
+
+/* social media buttons in header */
+.social-buttons {
+	float: right;
+	margin-top: 30px;
+	width: 278px;
+}
+@media screen and (max-width: 980px) {
+	.social-buttons {
+		display: none;
+	}
+}

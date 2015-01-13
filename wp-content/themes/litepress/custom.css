@@ -1,0 +1,16 @@
+/******************************************  
+ CUSTOM STYLESHEET
+*******************************************/
+
+/*
+* You can place your custom CSS statements in this file, after this message.
+* It is better to write everything custom here
+* because this file won't be replaced during updates.
+* 
+* Simply copy an existing style from style.css to this file, 
+* and modify it to your liking.
+*/
+
+.tablenav-pages_0, .bwg_image_alt_0, .bwg_image_browser_image_alt_0, #bwg_container1_0, #bwg_container2_0, .image_browser_images_conteiner_0, .bwg_image_browser_image_description_0{
+  background-color: white;
+}

@@ -1,0 +1,169 @@
+LitePress
+http://www.wpzoom.com/themes/litepress
+ 
+CHANGELOG
+---------
+
+v 1.3.8 (November 19, 2013)
+
+	- /js/jtools.js - file added back, after it was deleted accidentally in previous version.
+	- minor changes in following files:
+		- style.css
+		- /styles/boxed-red.css
+		- /styles/boxed-default.css
+		- /styles/boxed-black.css
+
+
+v 1.3.7 (October 16, 2013)
+
+	- /functions/theme/functions.php - fixed a bug with [wzslider] shortcode.
+
+
+v 1.3.6 (October 9, 2013)
+
+	- /functions/theme/functions.php - Added support for the new embed codes from Vimeo and YouTube (not containing "http:").
+
+
+v 1.3.5 (August 6, 2013)
+
+	- functions/theme/functions.php - fixed a bug with caption included in the excerpt of Featured Categories.
+	
+
+v 1.3.4 (June 14, 2013)
+
+	- Fixed Twitter Widget (added compatibility with API version 1.1)
+	- modified files:
+		- /functions/theme/widgets/twitter.php
+	
+	- added files:
+		- /functions/theme/widgets/twitteroauth/OAuth.php
+		- /functions/theme/widgets/twitteroauth/twitterauth.php
+
+
+v 1.3.3 (March 24, 2013)
+	
+	- Fixed a conflict with WordPress Related Posts plugin
+	- modified files:
+		/functions/theme/functions.php
+		single.php
+		
+
+v 1.3.2 (January 26, 2013)
+
+	- Fixed conflict with Featured Categories and jQuery UI Tabs styling.
+	- modified files:
+		/functions/theme/options.php
+		/styles/boxed-red.css
+		/styles/red.css
+		style.css
+		
+
+v 1.3.1 (January 26, 2013)
+	
+	- Added "Styling > Fonts" section in Theme Options.
+ 	- modified files:
+		/functions/theme/options.php
+		
+
+v 1.3 (January 22, 2013)
+
+	- jQuery bug fix (old version was included in the file /js/jtools.js)
+	- Main slider updated to use FlexSlider library
+	- modified files:
+		/functions/theme/widgets/featured-category.php
+		/js/init.js
+		/js/jtools.js
+	  + /js/flexslider.js
+ 		header.php
+		index.php
+		footer.php
+		style.css
+		video-slider.php
+		wpzoom-slider.php
+
+
+v 1.2.3 (December 1, 2012)
+
+	- Bug fix on Tabbed Widget.
+	- modified file:
+		/functions/theme/functions.php
+		
+
+v 1.2.1 (November 5, 2012)
+
+	- Added new option in "WPZOOM: Featured Category" widget which allows to exclude featured posts from being duplicated.
+	- modified file:
+		/functions/theme/widgets/featured-category.php
+
+
+v 1.2 (July 21, 2012)
+
+	- Added support for native WordPress image cropping
+	- The theme doesn't uses TimThumb script for thumbnails cropping anymore
+	- modified files:
+		/functions/theme/functions.php
+		/functions/theme/custom-posts.php
+		/functions/theme/post-options.php
+		/functions/theme/widgets/featured-category.php
+		/functions/theme/widgets/recentposts.php
+  		archive.php
+ 		comments.php
+ 		functions.php
+ 		loop.php
+ 		video-slider.php
+ 		wpzoom-carousel.php
+ 		wpzoom-slider.php
+
+ 
+v 1.1.6 (May 15, 2012)
+
+	- single.php - bug fix: "Hide author name" from single post didn't worked.
+ 		
+
+v 1.1.5 (May 3, 2012)
+
+	- bug fix with images from Slideshow Shortcode not showing in IE.
+		modified files: style.css
+
+
+v 1.1.4 (May 1, 2012)
+
+	- fixed bug with footer carousel in responsive layout
+		modified files:
+			- footer.php
+			- style.css
+
+
+v 1.1.3 (April 13, 2012)
+
+ 	- single.php - bug fix with author name not showing
+
+
+v 1.1.2 (April 13, 2012)
+
+ 	- functions/themes/widgets/featured-category.php - bug fix
+
+
+v 1.1.1 (April 12, 2012)
+	
+	- functions/themes/widgets/featured-category.php - Featured Category widget modified to display a link on Category Title.
+
+ 
+v 1.1 (April 6, 2012)
+	
+	- New color schemes.
+	- New sharing button: Google Plus
+		new files:
+			- /styles/*
+			- /images/light_bg.png
+		modified files:
+			- footer.php
+			- single.php
+			- style.css
+			- /functions/theme/config.php
+			- /functions/theme/options.php
+	
+	 
+v 1.0  (March 7, 2012)
+	
+	- initial release

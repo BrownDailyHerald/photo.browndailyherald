@@ -1,0 +1,67 @@
+body {
+	background:#EFEFEF url(../images/light_bg.png) repeat-x;
+}
+
+#logo a {
+	color:#41383A;
+}
+
+#logo a:hover {
+	color:#333;
+}
+
+#navbarsecond {
+	margin:0 auto;
+	width:1020px;
+ 	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	-webkit-border-radius: 6px 6px 0 0;
+	border-radius: 6px 6px 0 0;
+}
+
+#main {
+	padding-top: 20px;
+}
+
+.wrap {
+	background:#fff;
+	padding:0 20px;
+}
+
+#header .wrap {
+	background:none;
+}
+
+
+.dropdown a:hover {
+    background:#991111;
+}
+
+.dropdown ul { 
+ 	background:#9c2b2b;
+}
+
+.dropdown li:hover a { 
+	background:#9c2b2b;
+}
+
+.dropdown li:hover li a:hover {
+    background:#991111;
+}
+
+a { color: #9f3f3f; }
+.category-widget .tabs li.ui-tabs-active { background: #9f3f3f; }
+div.navigation span.current { color:#9f3f3f; }
+
+@media screen and (max-width: 980px) {
+	#navbarsecond {	width:94%;}
+	.wrap { padding: 0 2%; }
+ }
+
+@media screen and (max-width: 768px) {
+ 	#navbarsecond {	width:94%; }
+}
+
+@media screen and (max-width: 640px) {
+ 	#navbarsecond {	width:98%; }
+}

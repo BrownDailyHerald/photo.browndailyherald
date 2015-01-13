@@ -1,0 +1,29 @@
+<?php
+global $default_settings_default;
+$default_settings_default=array(
+        'bg_color'=>'#ffffff', 
+	'height'=>'380',
+	'width'=>'960',
+	'iwidth'=>'700',
+	'swidth'=>'110',
+	'border'=>'1',
+	'brcolor'=>'#cccccc',
+	'ptitle_font'=>'\'Century Gothic\',\'Avant Garde\',sans-serif',
+	'ptitle_fontg'=>'Oswald',
+	'ptitle_fsize'=>'16',
+	'ptitle_fstyle'=>'normal',
+	'ptitle_fcolor'=>'#ffffff',
+	'img_border'=>'0',
+	'img_brcolor'=>'#bbbbbb',
+	'show_content'=>'1',
+	'content_font'=>'Verdana,Geneva,sans-serif',
+	'content_fontg'=>'Open+Sans',
+	'content_fsize'=>'12',
+	'content_fstyle'=>'normal',
+	'content_fcolor'=>'#ffffff',
+	'content_from'=>'content',
+	'content_chars'=>'',
+	'content_bg'=>'#e00b56',
+	'content_opacity'=>'0.75'
+);
+?>

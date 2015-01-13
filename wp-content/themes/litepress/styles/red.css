@@ -1,0 +1,31 @@
+#header {
+ 	background:#9f3f3f;
+}
+
+#logo a {
+	color:#fff;
+}
+
+#logo a:hover {
+	color:#fff;
+}
+
+.dropdown a:hover {
+    background:#991111;
+}
+
+.dropdown ul { 
+ 	background:#9c2b2b;
+}
+
+.dropdown li:hover a { 
+	background:#9c2b2b;
+}
+
+.dropdown li:hover li a:hover {
+    background:#991111;
+}
+
+a { color: #9f3f3f;   }
+.category-widget .tabs li.ui-tabs-active { background: #9f3f3f;  }
+div.navigation span.current { color:#9f3f3f;  }

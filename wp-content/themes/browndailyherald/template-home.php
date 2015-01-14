@@ -31,8 +31,8 @@ body {
 	height: 420px;
 	display: block;
 	float: left;
-	padding-left: 15px;
-	padding-right: 30px;
+	padding-left: 30px;
+	padding-right: 15px;
 }
 
 .people-box img {
@@ -65,8 +65,8 @@ body {
 		height: 410px;
 		display: block;
 		float: left;
-		padding-left: 15px;
-		padding-right: 30px;
+		padding-left: 30px;
+		padding-right: 15px;
 	}
 	.people-box img {
 		width: 420px;
@@ -91,8 +91,8 @@ body {
 		height: 310px;
 		display: block;
 		float: left;
-		padding-left: 15px;
-		padding-right: 30px;
+		padding-left: 30px;
+		padding-right: 15px;
 	}
 	.people-box img {
 		width: 320px;

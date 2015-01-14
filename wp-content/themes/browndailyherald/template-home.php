@@ -4,6 +4,10 @@ Template Name: Home
 */
 ?>
 <style type="text/css">
+
+body {
+	min-width: 1000px;
+}
 	
 #home-content {
 	height: auto;
@@ -19,16 +23,16 @@ Template Name: Home
 }
 
 .features {
-width: 850px;
+	width: 850px;
 }
 
 .people-box {
-width: 470px;
-height: 420px;
-display: block;
-float: left;
-padding-left: 30px;
-padding-right: 15px;
+	width: 470px;
+	height: 420px;
+	display: block;
+	float: left;
+	padding-left: 15px;
+	padding-right: 30px;
 }
 
 .people-box img {
@@ -50,23 +54,98 @@ padding-right: 15px;
 	margin: auto;
 }
 
+@media screen and (max-width: 1000px) {
+    .sidebar {
+    	visibility: hidden;
+        display: none;
+        height: 0px;
+    }
+	.people-box {
+		width: 420px;
+		height: 410px;
+		display: block;
+		float: left;
+		padding-left: 15px;
+		padding-right: 30px;
+	}
+	.people-box img {
+		width: 420px;
+	}
+	
+}
+
+@media screen and (max-width: 750px) {
+	body {
+		min-width: 700px;
+	}
+    .sidebar {
+    	visibility: hidden;
+        display: none;
+        height: 0px;
+    }
+    .features {
+	 	width: 700px;
+	}
+	.people-box {
+		width: 320px;
+		height: 310px;
+		display: block;
+		float: left;
+		padding-left: 15px;
+		padding-right: 30px;
+	}
+	.people-box img {
+		width: 320px;
+	}
+	
+}
+
+@media screen and (max-width: 550px) {
+    body {
+    	margin: auto;
+		min-width: 400px;
+	}
+    .sidebar {
+    	visibility: hidden;
+        display: none;
+        height: 0px;
+    }
+    .features {
+	 	width: 400px;
+	}
+	.row {
+		width: 400px;
+	}
+	#home-content {
+		max-width: 400px;
+	}
+	.people-box {
+		margin: auto;
+		width: 400px;
+		height: 340px;
+		display: block;
+	}
+	.people-box img {
+		width: 400px;
+	}
+}
 </style>
 
-                
+<body>                
  <link href="wp-content/themes/browndailyherald/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <div id="home-content" class="clearfix">
 	<div class="sidebar">
 		<?php
 
-	        $args = array(
-	            'post_type' => 'essay',
-	            'orderby' => 'ASC'
-	        );
+        $args = array(
+            'post_type' => 'essay',
+            'orderby' => 'ASC'
+        );
 
-	        $the_query = new WP_Query( $args );
+        $the_query = new WP_Query( $args );
 
-	    	?>
+    	?>
 
 			    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : 
 			    												$the_query->the_post(); 
@@ -117,5 +196,5 @@ padding-right: 15px;
 		</div>
 	</div>
 </div>
-
+</body>
 <?php get_footer(); ?>

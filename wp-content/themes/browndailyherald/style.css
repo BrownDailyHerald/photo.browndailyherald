@@ -10,10 +10,11 @@ Template: litepress
 
 @import url("../litepress/style.css");
 
+/* All links should be brown */
+a { color: rgb(98, 52, 0) }
+
 /* We want our fonts to be Georgia */
 input, textarea, body { font-family: Georgia, Times New Roman, Times, serif; }
-
-
 
 /* This hides overflowing text in the category widget better. May need to tweak this */
 .category-widget .tabs a { line-height: 1.4; }
@@ -25,8 +26,14 @@ input, textarea, body { font-family: Georgia, Times New Roman, Times, serif; }
 .general-widget h2 { border-top: 4px solid #ececec; border-bottom:2px solid #ececec; color: #3f3d3d; font-size: 18px; font-weight: bold; line-height: 38px; margin: 25px 0 15px 0; }
 
 /* Make the sidebar look nicer */
-.wrap { width: 1000px; }
-#sidebar { width: 320px; }
+.wrap { width: 1000px; position: relative; padding-left: 20px; }
+#sidebar { width: 320px; 
+	padding: 6px;
+    border-width: 1px;
+    margin-left: 8px;
+
+    
+}
 #sidebar .widget {
 	background-color: #F8F8F8;
 	border: 1px solid #ECECEC;
@@ -72,11 +79,12 @@ input, textarea, body { font-family: Georgia, Times New Roman, Times, serif; }
 .widget ul { line-height: 1.4; }
 
 /* No more margins between tags/topics, it looks ugly when they're not in hashtag format. Also, tweak the style a bit */
-.tag_list a { margin: 0; color: #9F3F3F; }
+.tag_list a { margin: 0; color: #4d3430 }
 .tag_list { font-size: 14px; font-weight: bold; }
 
 /* Support for subtitles */
 h2.subtitle {
+  font-style: italic;
 	font-size: 18px;
 	font-weight: normal;
 	line-height: 1.3;
@@ -88,7 +96,7 @@ h2.subtitle {
 #navbarsecond {
 	background-image: none;
 	background-color: #4D3430;
-	border-top: 1px solid #613933;
+	border-top: none;
 }
 
 #navbar {
@@ -105,16 +113,30 @@ h2.subtitle {
 .dropdown .current-menu-item a { font-weight: normal; }
 
 /* Make the search box nicer looking */
-#s { font-weight: normal; color: #000; }
+#s { font-weight: normal; color: #000; padding: 0; padding-left: 6px; padding-right: 3px;}
 
 /* Header colors changes */
-#header { background-color: #3A1E1A !important; }
+#header { background-color: white !important; }
 
 /* Add our flag. */
-#navbar { margin-bottom: 0; }
-#header div.search_form { padding-top: 65px; }
-#searchform, #s {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
-#logo { padding-bottom: 0; }
+#navbar { 
+  margin-bottom: 0;
+  border: none;
+  background-color: white !important;
+}
+#navbar a { color: #3A1E1A !important; }
+#navbar .sfHover ul {
+  top: 24px;
+}
+#header div.search_form {
+  width: 180px;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+#searchform, #s {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; width: 100%; height: 25px; }
+#s { width: 150px; }
+#logo { padding-bottom: 0; width: 100%; text-align: center; margin: -20px 0px 10px -40px; }
 #logo h1 a {
 	display: block;
 	width: 640px;
@@ -124,6 +146,9 @@ h2.subtitle {
 	outline: none;
 
 	background-size: contain;
+}
+#logo img {
+  max-width: 580px;
 }
 
 /* Make sure the flag scales appropriately */
@@ -140,11 +165,11 @@ div.bdh_ad div { margin-left: auto; margin-right: auto; }
 div.footer_ad { margin-top: 25px; }
 
 /* Try to align elements on the post-meta properly */
-.post-meta { height: auto; }
+.post-meta { height: auto; position: relative; width: 100%; overflow: auto; }
 .post-meta span.meta-data { line-height: 30px; }
 
 /* Change the look of post-meta a little bit */
-.post-meta { border-top-width: 2px; padding: 5px 0 4px 15px; }
+.post-meta { background-color: inherit; padding: 10px 0px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; width: 100%;}
 
 /* Change the date on posts / post authors / some other text to use a different font */
 .post-meta,
@@ -169,13 +194,16 @@ div.navigation {
 
 /* Changing color to be consistent with other elements on the page */
 .meta-author { color: #6D6D6D; }
+.meta-author a[rel="author"], #reporter_type {
+  text-transform: uppercase;
+}
 
 /* Remove excess spacing on article page */
-#content .meta-author { border-bottom: 0; padding: 0; }
+#content .meta-author { padding: 8px 0px; border-bottom: 1px solid #eaeaea; border-top: 1px solid #eaeaea; }
 
 /* Removing the bottom border/spacing under author for category / archive pages */
 #recent-posts .recent-post .meta-author {
-	border-bottom: 0;
+	border: 0;
 	padding: 0;
 	margin: 0 0 5px;
 }
@@ -203,21 +231,28 @@ div.recent-post div.recent-meta span.comments a {
 #navbarsecond .dropdown ul { background-color: #9C2B2B; }
 #navbarsecond .dropdown li:hover li a:hover { background-color: #991111; }
 
+/* Change */
+#navbar .dropdown li:hover > a { color: white !important; }
+#navbar .dropdown ul li { color: white !important; }
+#navbar .dropdown ul li a { color: white !important; }
+.dropdown a {
+  transition: 250ms all;
+}
+
 /* Remove excess padding around top/bottom of menus */
 .dropdown ul {	padding: 0; }
 /* Make second submenu look a little nicer when the hover effect is used */
-#navbarsecond .dropdown ul {
-	margin-top: 9px;
-}
+#navbarsecond .dropdown ul { margin-top: 9px; }
 
 /* Adding a category list above single articles */
-#content .category_list { text-transform: uppercase; margin-bottom: 0; font-size: 12px; }
+#content .category_list { text-transform: uppercase; margin-bottom: 0; font-size: 10px; }
 
 /* Custom div for author information */
 div.author_top {
     border-top: 4px solid #ececec;
     border-bottom: 2px solid #ececec;
     font-size: 18px;
+    text-transform: uppercase;
     font-weight: bold;
     line-height: 1.3;
     margin: 0 0 15px 0;
@@ -299,6 +334,11 @@ div.navigation a:hover {
 	padding-left: 5px;
 }
 
+/* Scale up article text for readability */
+.entry > p {
+  font-size: 16px;
+}
+
 /* Make the images scale appropriately with the responsive design */
 .entry div.post-sidebar img {
 	width: 100%;
@@ -357,6 +397,8 @@ div.bdh-feature-posts .feature-posts-list li:last-child { border-bottom: 0; }
 #footer .widget a { color: #FFF; font-weight: normal; }
 #footer ul.sub-menu { margin-left: 10px; }
 
+.widget a { font-weight: normal; }
+
 /* Fix for IE bug with images and responsive design */
 .entry .category-widget img { width: inherit; max-width: 100%; height: auto; }
 
@@ -407,6 +449,10 @@ This has been slightly modified from the original CSS to make it look nicer. */
 	font-size: 1.2em;
 	color: #000;
 	text-align: left;
+
+	border-right-width:1px;
+    border-right-color:#6D6D6D;
+    border-right-style: solid;
 }
 
 .serieslist-box {
@@ -500,6 +546,10 @@ p.series-description {
 h1.archive_title {
 	font-size: 21px;
 }
+h1.title a {
+  font-size: 26px;
+  color: #111;
+}
 
 /* PRINT FIXES */
 @media print {
@@ -512,12 +562,212 @@ h1.archive_title {
 
 /* social media buttons in header */
 .social-buttons {
-	float: right;
-	margin-top: 30px;
+	position: absolute;
+	bottom: 20px;
 	width: 278px;
 }
+.social-buttons img {
+  max-height: 36px;
+  opacity: 0.8;
+}
+.social-buttons img:hover {
+  opacity: 1.0;
+}
+.social-buttons a {
+  text-decoration: none;
+}
 @media screen and (max-width: 980px) {
+  #logo {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 	.social-buttons {
 		display: none;
 	}
+	#header div.search_form { padding-top: 0px; position: relative; margin: auto; width: 300px;}
+	#header div.search_form #s { width: 270px; }
+}
+
+.wrap.mobile {
+  overflow: auto;
+}
+.wrap.mobile {
+  display: none;
+  padding: 0px !important;
+  height: 0px;
+  width: 100%;
+}
+.wrap.mobile.open {
+  height: auto;
+}
+.wrap.mobile * {
+  margin: 0px;
+  padding: 0px;
+  list-style: outside none none;
+}
+.wrap.mobile ul {
+  width: 100%;
+  overflow: hidden;
+}
+.wrap.mobile li {
+  color: white;
+  width: 100%;
+  float: left;
+  display: block;
+  font-size: 13px;
+  text-align: center;
+}
+.wrap.mobile #secondmenu_mobile > li {
+  width: 50%;
+}
+.wrap.mobile li:hover {
+  background-color: #9C2B2B;
+}
+.wrap.mobile a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 5px 0px;
+}
+#sections_btn {
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 9px 0px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  display: none;
+}
+
+/* Social share buttons under article */
+.share {
+  width: 43%;
+  margin-left: 5%;
+  padding: 10px 0px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0.9;
+  display: block;
+  float: left;
+}
+.share:hover {
+  opacity: 1.0;
+  text-decoration: none;
+}
+.share img {
+  height: 18px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.share.fb {
+  background-color: #3B5999;
+}
+.share.twitter {
+  background-color: #55ACEE;
+}
+
+/* Less padding on first navbar elements */
+#navbar a { padding: 4px 8px; }
+
+.front-page-widget p.meta {
+  margin-bottom: 4px;
+  font-size: 11px;
+  color: #777;
+}
+.front-page-widget h1 {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 640px) {
+  .wrap.screen { display: none; }
+  .wrap.mobile, #sections_btn { display: block; }
+  #searchform { display: none; }
+  .share {
+	  float: none;
+	  width: 90%;
+	  margin-bottom: 10px;
+	}
+	.share:last-child {
+	  margin-bottom: 0; !important;
+  }
+  .front-page-widget .column {
+    float: none !important;
+    width: 100% !important;
+    padding: 12px !important;
+  }
+  .front-page-widget .column .item {
+    padding: 12px !important;
+    
+  }
+}
+#searchsubmit {
+  background-size: 14px 17px;
+  padding: 0;
+  width: 17px;
+}
+
+.widget ul {
+  padding: 10px;
+}
+.widget ul li {
+	padding-bottom: 12px;
+}
+.widget ul li:last-child {
+  padding-bottom: 0px;
+}
+.front-page-widget .author {
+  text-transform: uppercase;
+}
+.front-page-widget img.wp-post-image {
+  width: 100%;
+  height: auto !important;
+}
+.front-page-widget .column.right {
+  float: right;
+  width: calc(60% - 1px);
+}
+.front-page-widget .column.left {
+  float: left;
+  width: 40%;
+  border-width: 1px;
+  border-right-width:1px;
+    border-right-color: #D3D3D3;
+    border-right-style: solid;
+}
+.front-page-widget .column.right .item {
+  padding-left: 12px;
+  padding-top: 8px;
+  border-width: 1px;
+  margin-left: 6px;
+    border-bottom-width:1px;
+    border-bottom-color:#D3D3D3;
+    border-bottom-style: solid;
+
+}
+
+.front-page-widget .column.right .item:last-child {
+  padding-left: 12px;
+  border-bottom: none;
+
+}
+
+.front-page-widget .column.left .item {
+  padding-right: 12px;
+  padding-top: 8px;
+  border-width: 1px;
+  margin-right: 8px;
+      border-bottom-width:1px;
+    border-bottom-color: #D3D3D3;
+    border-bottom-style: solid;
+
+ }
+.front-page-widget .column.left .item:last-child {
+  padding-right: 12px;
+  border-width: 1px;
+  border-bottom: none;
+ 
 }

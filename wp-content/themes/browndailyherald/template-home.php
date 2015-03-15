@@ -27,7 +27,7 @@ body {
 }
 
 .people-box {
-	width: 470px;
+	width: 440px;
 	height: 420px;
 	display: block;
 	float: left;

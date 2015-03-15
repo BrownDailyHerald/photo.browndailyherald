@@ -19,7 +19,7 @@ body {
 }
 
 .sidebar {
-	width: 150px;
+	width: 130px;
 }
 
 .features {

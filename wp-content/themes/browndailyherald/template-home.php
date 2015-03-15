@@ -27,8 +27,8 @@ body {
 }
 
 .people-box {
-	width: 440px;
-	height: 420px;
+	width: 420px;
+	height: 410px;
 	display: block;
 	float: left;
 	padding-left: 30px;
@@ -36,7 +36,7 @@ body {
 }
 
 .people-box img {
-	width: 440px;
+	width: 420px;
 }
 
 .people-box h3{

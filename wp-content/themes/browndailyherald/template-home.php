@@ -50,7 +50,7 @@ body {
 }
 
 .row {
-	width: 950px;
+	width: 850px;
 	margin: auto;
 }
 

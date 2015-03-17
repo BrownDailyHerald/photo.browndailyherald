@@ -9,6 +9,10 @@ Template Name: Slider
 	padding-bottom: 30px;
 }
 </style>
+<div class="gallery-page">
+	<h2><?php the_title(); ?></h2>
+	<h5><?php if(have_posts()) : while(have_posts()) : the_post(); the_content(); endwhile; endif; ?></h5>
+</div>
 <?php
 	$id = get_post_meta(get_the_ID(), 'wpcf-slider-id', TRUE); 
 ?>

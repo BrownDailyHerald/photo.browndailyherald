@@ -771,3 +771,17 @@ h1.title a {
   border-bottom: none;
  
 }
+
+.gallery-page, .gallery-page pre {
+	font-family: Oswald, 'Century Gothic','Avant Garde',sans-serif;
+}
+
+.gallery-page h5 {
+	font-weight: 500;
+}
+@media screen and (min-width: 1000px) {
+	.gallery-page {
+		width: 900px;
+		padding-left: 50px;
+	}
+}
